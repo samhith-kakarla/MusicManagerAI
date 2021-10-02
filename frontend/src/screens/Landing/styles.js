@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     color: colors.white,
   },
   image: {
-    width: 250,
+    width: 265,
     height: 250,
   },
   onboardingButton: {
@@ -133,6 +133,9 @@ const styles = StyleSheet.create({
     width: 350,
     fontWeight: '100',
     marginTop: 20,
+  },
+  mainButton: {
+    backgroundColor: colors.orange2,
   },
 });
 

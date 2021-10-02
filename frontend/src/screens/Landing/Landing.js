@@ -57,13 +57,20 @@ const LandingScreen = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <View style={styles.mainView}>
         <Text>LANDING PAGE</Text>
-        <Button
-          disabled={!request}
-          title="Login"
-          onPress={() => {
-            promptAsync();
-          }}
-        />
+        <View style={styles.buttonView}>
+          <Button
+            disabled={!request}
+            title="Login"
+            onPress={() => {
+              promptAsync();
+            }}
+            style={styles.mainButton}
+          />
+          <Button
+            title="Get Started"
+            onPress={() => navigation.navigate('Onboarding')}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );

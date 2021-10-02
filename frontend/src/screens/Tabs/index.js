@@ -1,5 +1,21 @@
-import { DashboardScreen } from './Dashboard';
+import { DashboardScreen, UpdatePlaylistScreen } from './Dashboard';
 import { ProfileScreen } from './Profile';
-import { OrganizerScreen } from './LibraryOrganizer';
+import {
+  OrganizerScreen,
+  SelectGenresScreen,
+  SelectMoodsScreen,
+  ViewPlaylistScreen,
+} from './LibraryOrganizer';
 
-export { DashboardScreen, ProfileScreen, OrganizerScreen };
+export {
+  // Dashboard
+  DashboardScreen,
+  UpdatePlaylistScreen,
+  // Profile
+  ProfileScreen,
+  // Library Organizer
+  OrganizerScreen,
+  SelectGenresScreen,
+  SelectMoodsScreen,
+  ViewPlaylistScreen,
+};
