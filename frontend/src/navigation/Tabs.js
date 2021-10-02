@@ -94,7 +94,7 @@ const HomeTabs = ({ navigation }) => {
               },
             })}
             tabBarOptions={{
-              activeTintColor: colors.red,
+              activeTintColor: colors.orange2,
               inactiveTintColor: colors.white,
               labelStyle: fontLoaded ? fontStyles.normal : '',
               labelPosition: 'below-icon',
