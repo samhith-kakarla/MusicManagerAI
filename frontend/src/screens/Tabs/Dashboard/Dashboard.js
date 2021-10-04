@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#3b3b3b',
+    backgroundColor: colors.black,
   },
 });
 

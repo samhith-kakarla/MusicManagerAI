@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { SafeAreaView, View, StyleSheet, Text } from 'react-native';
+import {
+  SafeAreaView,
+  View,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 
 import * as colors from '../../../theme/colors';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3b3b3b',
+    backgroundColor: colors.black,
   },
   mainView: {
     flex: 1,
@@ -24,20 +30,48 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 28,
   },
+  button: {
+    marginBottom: 5,
+    paddingVertical: 20,
+    alignItems: 'center',
+    flexDirection: 'row',
+    backgroundColor: colors.blue2,
+    borderWidth: 1,
+    borderRadius: 30,
+    width: 200,
+    paddingLeft: 20,
+    marginTop: 30,
+  },
+  buttonText: {
+    fontSize: 15,
+    color: colors.white,
+  },
 });
 
-const OrganizerScreen = ({ title }) => {
+const OrganizerScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.mainView}>
         <Text>LIBRARY ORGANIZER</Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('View Playlist')}
+        >
+          <Text style={styles.buttonText}>View Playlist!</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Select Genres')}
+        >
+          <Text style={styles.buttonText}>Organize My Library!</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
 };
 
 OrganizerScreen.propTypes = {
-  title: PropTypes.string.isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 export default OrganizerScreen;

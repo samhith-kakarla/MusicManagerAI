@@ -17,3 +17,6 @@ export const orange2 = '#FC7636';
 export const blue0 = '#CDD7FE';
 export const blue1 = '#6987FC';
 export const blue2 = '#3E63FA';
+
+export const black = '#1F1F1F';
+export const white = '#FFFFFF';

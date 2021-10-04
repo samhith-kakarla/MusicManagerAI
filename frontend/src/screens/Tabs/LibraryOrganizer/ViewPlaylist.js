@@ -8,7 +8,7 @@ import * as colors from '../../../theme/colors';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3b3b3b',
+    backgroundColor: colors.black,
   },
   mainView: {
     flex: 1,
@@ -20,9 +20,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   headerText: {
-    color: colors.yellow,
+    color: colors.white,
     fontWeight: 'bold',
     fontSize: 28,
+  },
+  playlistCover: {
+    width: '100%',
+    height: 300,
+    backgroundColor: colors.blue2,
   },
 });
 
@@ -30,7 +35,8 @@ const ViewPlaylistScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.mainView}>
-        <Text>VIEW PLAYLIST</Text>
+        <View style={styles.playlistCover}></View>
+        <Text style={styles.headerText}>VIEW PLAYLIST</Text>
       </View>
     </SafeAreaView>
   );

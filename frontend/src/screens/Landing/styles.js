@@ -5,7 +5,7 @@ import * as colors from '../../theme/colors';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#333333',
+    backgroundColor: colors.black,
   },
   mainView: {
     flex: 1,

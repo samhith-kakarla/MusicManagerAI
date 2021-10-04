@@ -5,18 +5,16 @@ import * as colors from '../../../theme/colors';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3b3b3b',
-    alignItems: 'center',
+    backgroundColor: colors.black,
     justifyContent: 'center',
   },
   mainView: {
     flex: 1,
-    paddingTop: 140,
-    paddingBottom: 10,
-    paddingHorizontal: 30,
+    paddingTop: 75,
+    paddingBottom: 50,
+    paddingHorizontal: 50,
     flexDirection: 'column',
     justifyContent: 'space-between',
-    alignItems: 'center',
   },
   modalView: {
     margin: 20,
@@ -38,9 +36,9 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   headerText: {
-    color: colors.red,
+    color: colors.white,
     fontWeight: 'bold',
-    fontSize: 28,
+    fontSize: 35,
   },
   text: {
     color: colors.red,
@@ -88,17 +86,16 @@ const styles = StyleSheet.create({
   settingsView: {
     marginTop: 30,
     marginBottom: 10,
-    marginRight: -40,
+    marginRight: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   settingText: {
     marginTop: 6,
     fontSize: 16,
     textAlign: 'left',
     marginRight: 200,
-  },
-  switchButton: {
-    position: 'absolute',
-    marginLeft: 175,
+    color: colors.white,
   },
   roundButton: {
     marginTop: 15,
@@ -120,29 +117,57 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     backgroundColor: colors.yellow,
   },
-  button: {
+  spotifyButton: {
     marginBottom: 5,
-    paddingVertical: 5,
+    paddingVertical: 20,
     alignItems: 'center',
-    backgroundColor: colors.red,
-    borderColor: colors.red,
+    flexDirection: 'row',
+    backgroundColor: colors.blue2,
     borderWidth: 1,
-    borderRadius: 5,
+    borderRadius: 30,
     width: 200,
+    paddingLeft: 20,
+    marginTop: 30,
   },
-  buttonText: {
+  spotifyButtonText: {
     fontSize: 15,
-    fontWeight: 'bold',
     color: colors.white,
   },
-  cameraButton: {
-    marginLeft: 190,
-    marginTop: -35,
+  spotifyLogo: {
+    marginRight: 15,
+    width: 20,
+    height: 20,
+  },
+  settingsText: {
+    color: colors.white,
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginTop: 60,
+  },
+  logoutButton: {
+    backgroundColor: colors.blue2,
+    width: '100%',
+    paddingVertical: 15,
+    borderRadius: 50,
+    marginBottom: 15,
+  },
+  logoutButtonText: {
+    textAlign: 'center',
+    color: colors.white,
+    fontWeight: 'bold',
+  },
+  infoButtonText: {
+    textAlign: 'center',
+    color: colors.white,
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginTop: 10,
   },
   editButton: {
     marginLeft: 285,
     marginTop: -30,
   },
+  buttonView: {},
 });
 
 export default styles;

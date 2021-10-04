@@ -27,7 +27,6 @@ const Main = () => {
   // const setBackendFetched = () => dispatch(reduxBackendFetched());
   // const setBackendError = () => dispatch(reduxBackendError());
 
-
   return (
     <NavigationContainer>
       <Stack.Navigator

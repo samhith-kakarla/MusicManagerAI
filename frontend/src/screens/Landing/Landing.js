@@ -10,7 +10,10 @@ import { Button } from 'react-native-elements';
 import { getSpotifyUserId } from '../../api/spotify';
 
 import { setAuthStatus as reduxSetAuthStatus } from '../../redux/actions/authActions';
-import { setIsAuthenticated as reduxSetIsAuthenticated } from '../../redux/actions/userActions';
+import {
+  setIsAuthenticated as reduxSetIsAuthenticated,
+  setSpotifyProfileURL as reduxSetSpotifyProfileURL,
+} from '../../redux/actions/userActions';
 // import * as colors from '../../theme/colors';
 import styles from './styles';
 
@@ -40,17 +43,23 @@ const LandingScreen = ({ navigation }) => {
   const setAuthStatus = (userId, accessToken, refreshToken, expiresIn) =>
     dispatch(reduxSetAuthStatus(userId, accessToken, refreshToken, expiresIn));
   const setIsAuthenticated = () => dispatch(reduxSetIsAuthenticated());
+  const setSpotifyProfileURL = (url) =>
+    dispatch(reduxSetSpotifyProfileURL(url));
 
   useEffect(() => {
-    if (response?.type === 'success') {
-      console.log(response.params);
-      // eslint-disable-next-line camelcase
-      const { access_token, expires_in } = response.params;
-      console.log(access_token);
-      const spotifyUserId = getSpotifyUserId(access_token);
-      setAuthStatus(spotifyUserId, access_token, '', expires_in);
-      setIsAuthenticated();
-    }
+    (async () => {
+      if (response?.type === 'success') {
+        console.log(response.params);
+        // eslint-disable-next-line camelcase
+        const { access_token, expires_in } = response.params;
+        console.log(access_token);
+        const spotifyUserId = await getSpotifyUserId(access_token);
+        console.log(spotifyUserId);
+        setAuthStatus(spotifyUserId, access_token, '', expires_in);
+        setSpotifyProfileURL(`https://open.spotify.com/user/${spotifyUserId}`);
+        setIsAuthenticated();
+      }
+    })();
   }, [response]);
 
   return (
